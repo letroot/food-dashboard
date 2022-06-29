@@ -12,7 +12,7 @@
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
         </div>
-        <input type="search" id="search" class="block p-3 pl-10 w-full text-sm text-gray-700 bg-slate-50 rounded-md 
+        <input type="search" id="search" class="block p-3 pl-10 w-full text-sm text-gray-700 bg-slate-100 rounded-md 
                 border-gray-50 focus:ring-slate-100 focus:border-slate-100" placeholder="Search" required>
 
       </div>

@@ -7,7 +7,7 @@ import SideBar from "../components/SideBar.vue";
   <div>
     <NavBar />
     <div class="flex">
-      <SideBar />
+      <SideBar  />
       <DashBoard />
     </div>
   </div>
