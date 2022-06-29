@@ -1,10 +1,14 @@
 <script setup>
 import NavBar from "../components/NavBar.vue";
+import SideBar from "../components/SideBar.vue";
 </script>
 
 <template>
-  <div class="text-red-600">
+  <div>
     <NavBar />
-    <p>Welcome to the Dashboard</p>
+    <div class="flex">
+      <SideBar />
+      <DashBoard />
+    </div>
   </div>
 </template>
