@@ -35,7 +35,7 @@
         <li>
           <button
             type="button"
-            class="flex items-center p-2 w-full text-sm font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100"
+            class="flex items-center p-2 w-full text-sm font-normal transition duration-75 text-gray-600 rounded-lg hover:bg-red-100 hover:text-pink-700 hover:font-semibold"
             aria-controls="dropdown-orders"
             data-collapse-toggle="dropdown-orders"
           >
@@ -74,22 +74,36 @@
             <li>
               <a
                 href="#"
-                class="flex items-center p-2 pl-11 w-full text-sm font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100"
-                >Products</a
+                class="flex items-center p-2 pl-11 w-full text-sm font-normal text-gray-600 rounded-lg transition duration-75 group hover:bg-red-100 hover:text-pink-700"
+                >Create orders</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="flex items-center p-2 pl-11 w-full text-sm font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100"
-                >Billing</a
+                class="flex items-center p-2 pl-11 w-full text-sm font-normal text-gray-600 rounded-lg transition duration-75 group hover:bg-red-100 hover:text-pink-700"
+                >All orders</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="flex items-center p-2 pl-11 w-full text-sm font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100"
-                >Invoice</a
+                class="flex items-center p-2 pl-11 w-full text-sm font-normal text-gray-600 rounded-lg transition duration-75 group hover:bg-red-100 hover:text-pink-700"
+                >Gifted orders</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 pl-11 w-full text-sm font-normal text-gray-600 rounded-lg transition duration-75 group hover:bg-red-100 hover:text-pink-700"
+                >Scheduled orders</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 pl-11 w-full text-sm font-normal text-gray-600 rounded-lg transition duration-75 group hover:bg-red-100 hover:text-pink-700"
+                >Group orders</a
               >
             </li>
           </ul>
