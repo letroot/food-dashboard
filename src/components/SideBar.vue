@@ -11,8 +11,8 @@
 <!-- Replace SVGs with HeroIcon components -->
 
 <template>
-  <aside class="w-64" aria-label="Sidebar">
-    <div class="py-4 px-3 bg-white border-r-2 border-slate-50 rounded h-full">
+  <aside class="w-64 min-h-full" aria-label="Sidebar">
+    <div class="py-4 px-3 bg-white border-r-2 border-slate-50 rounded">
       <ul class="space-y-2">
         <li>
           <a
@@ -40,7 +40,7 @@
             data-collapse-toggle="dropdown-orders"
           >
             <svg
-              class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900"
+              class="flex-shrink-0 w-6 h-6"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@
               ></path>
             </svg>
             <span
-              class="flex-1 ml-3 text-left whitespace-nowrap"
+              class="flex-1 ml-3 text-left whitespace-nowrap "
               sidebar-toggle-item
               >Orders</span
             >
