@@ -4,6 +4,7 @@ const props = defineProps(["value", "label", "icon"]);
 
 <template>
   <div
+    id="container"
     class="p-6 bg-gradient-to-r to-indigo-500 via-purple-600 from-pink-500 w-full px-4 pl-6 py-8 rounded-md"
   >
     <div class="flex items-center">
@@ -24,7 +25,7 @@ const props = defineProps(["value", "label", "icon"]);
         </svg>
       </div>
       <div class="flex flex-col text-white pl-2">
-        <span class="text-xl font-semibold">{{ value }}</span>
+        <span class="text-2xl">{{ value }}</span>
         <span class="text-xs font-normal">{{ label }}</span>
       </div>
     </div>

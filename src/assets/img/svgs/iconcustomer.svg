@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="85" height="81" viewBox="0 0 85 81">
+  <defs>
+    <filter id="Rectangle_200" x="0" y="0" width="85" height="81" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Icon_customer" data-name="Icon customer" transform="translate(-446 -677.5)">
+    <g transform="matrix(1, 0, 0, 1, 446, 677.5)" filter="url(#Rectangle_200)">
+      <rect id="Rectangle_200-2" data-name="Rectangle 200" width="67" height="63" rx="10" transform="translate(9 6)" fill="rgba(24,215,135,0.05)"/>
+    </g>
+    <path id="Icon_awesome-users" data-name="Icon awesome-users" d="M5.625,13.125a3.75,3.75,0,1,0-3.75-3.75A3.753,3.753,0,0,0,5.625,13.125Zm26.25,0a3.75,3.75,0,1,0-3.75-3.75A3.753,3.753,0,0,0,31.875,13.125ZM33.75,15H30a3.739,3.739,0,0,0-2.643,1.09,8.571,8.571,0,0,1,4.4,6.41h3.867A1.873,1.873,0,0,0,37.5,20.625V18.75A3.753,3.753,0,0,0,33.75,15Zm-15,0a6.563,6.563,0,1,0-6.562-6.562A6.559,6.559,0,0,0,18.75,15Zm4.5,1.875h-.486a9.061,9.061,0,0,1-8.027,0H14.25a6.752,6.752,0,0,0-6.75,6.75v1.688a2.813,2.813,0,0,0,2.813,2.813H27.188A2.813,2.813,0,0,0,30,25.313V23.625A6.752,6.752,0,0,0,23.25,16.875ZM10.143,16.09A3.739,3.739,0,0,0,7.5,15H3.75A3.753,3.753,0,0,0,0,18.75v1.875A1.873,1.873,0,0,0,1.875,22.5H5.736A8.592,8.592,0,0,1,10.143,16.09Z" transform="translate(469.75 700)" fill="#18d787"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="85" height="81" viewBox="0 0 85 81">
+  <defs>
+    <filter id="Rectangle_200" x="0" y="0" width="85" height="81" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Icon_revenue" data-name="Icon revenue" transform="translate(-446 -677.5)">
+    <g transform="matrix(1, 0, 0, 1, 446, 677.5)" filter="url(#Rectangle_200)">
+      <rect id="Rectangle_200-2" data-name="Rectangle 200" width="67" height="63" rx="10" transform="translate(9 6)" fill="rgba(24,104,215,0.05)"/>
+    </g>
+    <path id="Icon_metro-chart-bars" data-name="Icon metro-chart-bars" d="M2.142,24.334H30.527v3.548H2.142Zm3.548-7.1H9.238V22.56H5.69Zm5.322-7.1H14.56V22.56H11.012Zm5.322,5.322h3.548v7.1H16.334ZM21.657,4.82H25.2V22.56H21.657Z" transform="translate(472.166 698.648)" fill="#1868d7"/>
+  </g>
+</svg>

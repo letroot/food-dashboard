@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.026" y1="0.94" x2="0.975" y2="0.038" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#db166e"/>
+      <stop offset="1" stop-color="#1868d7"/>
+    </linearGradient>
+    <filter id="Rectangle_201" x="0" y="0" width="120" height="120" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="GMV_highest_" data-name="GMV highest " transform="translate(-436 -669.838)">
+    <g transform="matrix(1, 0, 0, 1, 436, 669.84)" filter="url(#Rectangle_201)">
+      <rect id="Rectangle_201-2" data-name="Rectangle 201" width="84" height="84" rx="15" transform="translate(18 15)" fill="url(#linear-gradient)"/>
+    </g>
+    <path id="Icon_metro-chart-bars" data-name="Icon metro-chart-bars" d="M2.142,31.855H41.466V36.77H2.142Zm4.915-9.831h4.915V29.4H7.058Zm7.373-9.831h4.915V29.4H14.431ZM21.8,19.566h4.915V29.4H21.8ZM29.177,4.82h4.915V29.4H29.177Z" transform="translate(474.195 706.043)" fill="#fff"/>
+  </g>
+</svg>
