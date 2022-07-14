@@ -1,4 +1,9 @@
-<script setup></script>
+<script setup>
+import { capitalize } from 'lodash';
+const userProfile = JSON.parse(localStorage.getItem("user-profile"));
+console.log(userProfile);
+const adminName = `${capitalize(userProfile.firstname)} ${capitalize(userProfile.lastname)}`;
+</script>
 
 <template>
   <div
@@ -65,7 +70,7 @@
 
         <div class="flex flex-col leading-tight">
           <span class="text-gray-800 text-sm font-semibold"
-            >Benjamin Bello</span
+            >{{ adminName }}</span
           >
           <span class="text-gray-400 text-xs font-normal">Admin</span>
         </div>

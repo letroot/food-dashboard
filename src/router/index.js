@@ -24,21 +24,7 @@ const router = createRouter({
       name: "create_order",
       component: CreateOrderView,
     },
-    {
-      path: "/create/order/details",
-      name: "create_order_details",
-      component: CreateOrderDetailView,
-    },
-    {
-      path: "/create/order/details_",
-      name: "create_order_details_atomic",
-      component: CreateOrderAtomicDetailView,
-    },
-    {
-      path: "/create/order/notes",
-      name: "create_order_notes",
-      component: CreateOrderNotesView,
-    },
+
   ],
 });
 
