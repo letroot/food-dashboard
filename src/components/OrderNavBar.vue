@@ -6,7 +6,7 @@
   >
     <span class="font-semibold text-lg text-pink-900">Create Order</span>
 
-    <router-link to="/orders">
+    <router-link to="/">
       <span
         class="px-4 py-2 text-gray-700 border border-gray-300 font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease"
       >

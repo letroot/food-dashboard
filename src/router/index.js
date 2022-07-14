@@ -1,9 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import CreateOrderView from "../views/CreateOrderView.vue";
-import CreateOrderDetailView from "../views/CreateOrderDetailView.vue";
-import CreateOrderAtomicDetailView from "../views/CreateOrderAtomicDetailView.vue";
-import CreateOrderNotesView from "../views/CreateOrderNotesView.vue";
 import LoginView from "../views/LoginView.vue";
 
 const router = createRouter({
@@ -24,7 +21,6 @@ const router = createRouter({
       name: "create_order",
       component: CreateOrderView,
     },
-
   ],
 });
 

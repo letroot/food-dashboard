@@ -10,6 +10,10 @@ import CreateOrderNotes from "../components/CreateOrderNotes.vue";
 import { ref } from "vue";
 
 let formStage = ref(1);
+
+function gotoStep(step) {
+  formStage = parseInt(step);
+}
 </script>
 
 <template>
@@ -18,7 +22,6 @@ let formStage = ref(1);
     <div class="flex">
       <OrderSideBar />
 
-      <CreateOrderForm v-show="formStage == 1" />
       <CreateOrderDetails v-show="formStage == 2" />
       <CreateOrderAtomicDetails v-show="formStage == 3" />
       <CreateOrderNotes v-show="formStage == 4" />
@@ -91,6 +94,7 @@ let formStage = ref(1);
             <button
               type="button"
               class="inline-block mt-10 px-48 py-3 bg-pink-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-pink-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out"
+              onClick="gotoStep(2)"
             >
               Create Order
             </button>
