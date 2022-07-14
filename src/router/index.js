@@ -4,10 +4,16 @@ import CreateOrderView from "../views/CreateOrderView.vue";
 import CreateOrderDetailView from "../views/CreateOrderDetailView.vue";
 import CreateOrderAtomicDetailView from "../views/CreateOrderAtomicDetailView.vue";
 import CreateOrderNotesView from "../views/CreateOrderNotesView.vue";
+import LoginView from "../views/LoginView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: "/login",
+      name: "login",
+      component: LoginView,
+    },
     {
       path: "/",
       name: "home",
