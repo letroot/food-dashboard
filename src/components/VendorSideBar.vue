@@ -8,37 +8,46 @@ defineEmits(["previousPage"]);
 const orderSteps = [
   {
     step: "1",
-    title: "Type of Order",
-    subtitle: "Please select the type of order",
+    title: "Create your Account",
+    subtitle: "lorem ipsum",
   },
   {
     step: "2",
-    title: "Customer Details",
-    subtitle: "Fill in customer details",
+    title: "Register your Store",
+    subtitle: "lorem ipsum",
   },
   {
     step: "3",
-    title: "Order Details",
-    subtitle: "Fill in order details",
+    title: "Store Information",
+    subtitle: "lorem ipsum",
   },
   {
     step: "4",
-    title: "Comments/Notes",
-    subtitle: "Anything else we should know",
+    title: "Store Bank Details",
+    subtitle: "lorem ipsum",
+  },
+  {
+    step: "5",
+    title: "Add your Menu",
+    subtitle: "lorem ipsum",
+  },
+  {
+    step: "6",
+    title: "Add Staff",
+    subtitle: "lorem ipsum",
+  },
+  {
+    step: "7",
+    title: "Vendor Verification",
+    subtitle: "lorem ipsum",
   },
 ];
 
 console.log(props.currentStep);
 </script>
 
-<!-- TODO -->
-<!-- Use loop to populate sidebar list -->
-
-<!-- TODO -->
-<!-- Replace SVGs with HeroIcon components -->
-
 <template>
-  <aside class="w-96 min-h-screen bg-gray-100" aria-label="Sidebar">
+  <aside class="w-80 min-h-screen bg-gray-100" aria-label="Sidebar">
     <div class="pl-10 pt-12">
       <div class="flex flex-col">
         <!-- back to previous page -->
@@ -101,7 +110,7 @@ console.log(props.currentStep);
                 fill="currentColor"
               />
               <rect
-                :class="{ hidden: index === 3 }"
+                :class="{ hidden: index === 6 }"
                 x="8.14479"
                 y="18.7783"
                 width="0.904977"
