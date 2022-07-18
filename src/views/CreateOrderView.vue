@@ -1,10 +1,10 @@
 <script setup>
 import OrderNavBar from "../components/OrderNavBar.vue";
 import OrderSideBar from "../components/OrderSideBar.vue";
-import CreateCustomerDetails from "../components/CreateCustomerDetails.vue";
-import CreateOrderForm from "../components/CreateOrderForm.vue";
-import CreateAtomicDetails from "../components/CreateAtomicDetails.vue";
-import CreateOrderNotes from "../components/CreateOrderNotes.vue";
+import OrderStage1 from "../components/OrderStage1.vue";
+import OrderStage2 from "../components/OrderStage2.vue";
+import OrderStage3 from "../components/OrderStage3.vue";
+import OrderStage4 from "../components/OrderStage4.vue";
 
 import { ref } from "vue";
 
@@ -27,17 +27,21 @@ function goBack() {
   <div>
     <OrderNavBar />
     <div class="flex">
-      <OrderSideBar @previousPage="goBack()" :currentStep=formStage />
+      <OrderSideBar @previousPage="goBack()" :currentStep="formStage" />
 
-      <CreateOrderForm
+      <OrderStage1
         @nextStage="gotoStep(formStage + 1)"
         v-show="formStage == 1"
       />
-      <CreateCustomerDetails @nextStage="gotoStep(formStage + 1)" v-show="formStage == 2" />
-      <CreateAtomicDetails @nextStage="gotoStep(formStage + 1)" v-show="formStage == 3" />
-      <CreateOrderNotes v-show="formStage == 4" />
-
-      <!-- STEP ONE -->
+      <OrderStage2
+        @nextStage="gotoStep(formStage + 1)"
+        v-show="formStage == 2"
+      />
+      <OrderStage3
+        @nextStage="gotoStep(formStage + 1)"
+        v-show="formStage == 3"
+      />
+      <OrderStage4 v-show="formStage == 4" />
     </div>
   </div>
 </template>
