@@ -84,7 +84,7 @@
           </div>
         </div>
 
-        <router-link to="/create/order/notes">
+        <router-link to="/">
           <button
             type="button"
             class="inline-block mt-10 px-36 py-3 bg-pink-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-pink-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out"
