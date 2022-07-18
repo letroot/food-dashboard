@@ -110,7 +110,7 @@
         </li>
         <li>
           <router-link
-            to="#"
+            to="/create/vendor"
             class="flex items-center p-2 text-sm font-normal transition duration-75 text-gray-600 rounded-lg hover:bg-red-100 hover:text-pink-700 hover:font-semibold"
           >
             <svg

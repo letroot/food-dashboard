@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import CreateOrderView from "../views/CreateOrderView.vue";
+import CreateVendorView from "../views/CreateVendorView.vue";
 import LoginView from "../views/LoginView.vue";
 import { useUserStore } from "../stores/userStore";
 
@@ -15,7 +16,7 @@ const router = createRouter({
     },
     {
       path: "/",
-      name: "home",
+      name: "dashboard",
       component: HomeView,
       meta: {
         requiresAuth: true,
@@ -23,8 +24,16 @@ const router = createRouter({
     },
     {
       path: "/create/order",
-      name: "create_order",
+      name: "create-order",
       component: CreateOrderView,
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: "/create/vendor",
+      name: "create-vendor",
+      component: CreateVendorView,
       meta: {
         requiresAuth: true,
       },
