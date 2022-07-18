@@ -1,4 +1,5 @@
 <script setup>
+defineEmits(["nextStage"]);
 </script>
 
 <template>
@@ -12,7 +13,7 @@
     <hr class="border-slate-200 w-full mt-8" />
 
     <div class="mt-8 flex flex-col">
-      <form>
+      <form @submit.prevent="$emit('nextStage')">
         <label for="order-type" class="text-xs">Select type of order</label>
         <div class="flex">
           <div class="mt-1 xl:w-96">
@@ -66,7 +67,7 @@
         </div>
 
         <button
-          type="button"
+          type="submit"
           class="inline-block mt-10 px-48 py-3 bg-pink-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-pink-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out"
         >
           Create Order

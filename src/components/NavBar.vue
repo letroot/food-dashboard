@@ -1,8 +1,17 @@
 <script setup>
-import { capitalize } from 'lodash';
+import { ref } from "vue";
+import { capitalize } from "lodash";
+
 const userProfile = JSON.parse(localStorage.getItem("user-profile"));
+const adminName = `${capitalize(userProfile.firstname)} ${capitalize(
+  userProfile.lastname
+)}`;
+
+let toggleProfile = ref(false);
+
+function logoutUser() {}
+
 console.log(userProfile);
-const adminName = `${capitalize(userProfile.firstname)} ${capitalize(userProfile.lastname)}`;
 </script>
 
 <template>
@@ -68,29 +77,39 @@ const adminName = `${capitalize(userProfile.firstname)} ${capitalize(userProfile
           alt="Profile image"
         />
 
-        <div class="flex flex-col leading-tight">
+        <div class="flex flex-col leading-tight relative">
           <span class="text-gray-800 text-sm font-semibold"
-            >{{ adminName }}</span
-          >
+            >{{ adminName }}
+          </span>
           <span class="text-gray-400 text-xs font-normal">Admin</span>
+          <ul
+            v-show="toggleProfile"
+            class="absolute -right-8 top-10 shadow-lg bg-slate-50 transition-all"
+          >
+            <li class="rounded-md text-gray-800 text-sm">
+              <button @click="logoutUser" class="px-6 py-2">Logout</button>
+            </li>
+          </ul>
         </div>
 
-        <span class="relative block bg-red-50 p-0.5 rounded-full ml-5 mr-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="black"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </span>
+        <button @click="toggleProfile = !toggleProfile">
+          <span class="relative block bg-red-50 p-0.5 rounded-full ml-5 mr-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="black"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </span>
+        </button>
       </div>
     </div>
   </div>
