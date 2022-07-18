@@ -11,13 +11,13 @@
 <!-- Replace SVGs with HeroIcon components -->
 
 <template>
-  <aside class="w-64 min-h-full" aria-label="Sidebar">
+  <router-linkside class="w-64 min-h-full" aria-label="Sidebar">
     <div class="py-4 px-3 bg-white border-r-2 border-slate-50 rounded">
       <ul class="space-y-2">
         <li>
-          <a
-            href="#"
-            class="flex items-center p-2 text-sm font-normal transition duration-75 text-gray-600 rounded-lg hover:bg-red-100 hover:text-pink-700 hover:font-semibold"
+          <router-link
+            to="/"
+            class="flex items-center p-2 text-sm font-normal transition duration-75 text-gray-600 active:bg-red-100 rounded-lg hover:bg-red-100 hover:text-pink-700 hover:font-semibold"
           >
             <svg
               class="w-6 h-6"
@@ -29,7 +29,7 @@
               <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
             </svg>
             <span class="ml-3">Dashboard</span>
-          </a>
+          </router-link>
         </li>
 
         <li>
@@ -72,45 +72,45 @@
           </button>
           <ul id="dropdown-orders" class="hidden py-2 space-y-2">
             <li>
-              <a
-                href="/create/order"
+              <router-link
+                to="/create/order"
                 class="flex items-center p-2 pl-11 w-full text-sm font-normal text-gray-600 rounded-lg transition duration-75 group hover:bg-red-100 hover:text-pink-700"
-                >Create orders</a
+                >Create orders</router-link
               >
             </li>
             <li>
-              <a
-                href="#"
+              <router-link
+                to="#"
                 class="flex items-center p-2 pl-11 w-full text-sm font-normal text-gray-600 rounded-lg transition duration-75 group hover:bg-red-100 hover:text-pink-700"
-                >All orders</a
+                >All orders</router-link
               >
             </li>
             <li>
-              <a
-                href="#"
+              <router-link
+                to="#"
                 class="flex items-center p-2 pl-11 w-full text-sm font-normal text-gray-600 rounded-lg transition duration-75 group hover:bg-red-100 hover:text-pink-700"
-                >Gifted orders</a
+                >Gifted orders</router-link
               >
             </li>
             <li>
-              <a
-                href="#"
+              <router-link
+                to="#"
                 class="flex items-center p-2 pl-11 w-full text-sm font-normal text-gray-600 rounded-lg transition duration-75 group hover:bg-red-100 hover:text-pink-700"
-                >Scheduled orders</a
+                >Scheduled orders</router-link
               >
             </li>
             <li>
-              <a
-                href="#"
+              <router-link
+                to="#"
                 class="flex items-center p-2 pl-11 w-full text-sm font-normal text-gray-600 rounded-lg transition duration-75 group hover:bg-red-100 hover:text-pink-700"
-                >Group orders</a
+                >Group orders</router-link
               >
             </li>
           </ul>
         </li>
         <li>
-          <a
-            href="#"
+          <router-link
+            to="#"
             class="flex items-center p-2 text-sm font-normal transition duration-75 text-gray-600 rounded-lg hover:bg-red-100 hover:text-pink-700 hover:font-semibold"
           >
             <svg
@@ -124,11 +124,11 @@
               ></path>
             </svg>
             <span class="flex-1 ml-3 whitespace-nowrap">Vendors</span>
-          </a>
+          </router-link>
         </li>
         <li>
-          <a
-            href="#"
+          <router-link
+            to="#"
             class="flex items-center p-2 text-sm font-normal transition duration-75 text-gray-600 rounded-lg hover:bg-red-100 hover:text-pink-700 hover:font-semibold"
           >
             <svg
@@ -145,11 +145,11 @@
               ></path>
             </svg>
             <span class="flex-1 ml-3 whitespace-nowrap">Deliveries</span>
-          </a>
+          </router-link>
         </li>
         <li>
-          <a
-            href="#"
+          <router-link
+            to="#"
             class="flex items-center p-2 text-sm font-normal transition duration-75 text-gray-600 rounded-lg hover:bg-red-100 hover:text-pink-700 hover:font-semibold"
           >
             <svg
@@ -165,11 +165,11 @@
               />
             </svg>
             <span class="flex-1 ml-3 whitespace-nowrap">Menu</span>
-          </a>
+          </router-link>
         </li>
         <li>
-          <a
-            href="#"
+          <router-link
+            to="#"
             class="flex items-center p-2 text-sm font-normal transition duration-75 text-gray-600 rounded-lg hover:bg-red-100 hover:text-pink-700 hover:font-semibold"
           >
             <svg
@@ -185,11 +185,11 @@
               />
             </svg>
             <span class="flex-1 ml-3 whitespace-nowrap">Chats</span>
-          </a>
+          </router-link>
         </li>
         <li>
-          <a
-            href="#"
+          <router-link
+            to="#"
             class="flex items-center p-2 text-sm font-normal transition duration-75 text-gray-600 rounded-lg hover:bg-red-100 hover:text-pink-700 hover:font-semibold"
           >
             <svg
@@ -205,11 +205,11 @@
               />
             </svg>
             <span class="flex-1 ml-3 whitespace-nowrap">KPI</span>
-          </a>
+          </router-link>
         </li>
         <li>
-          <a
-            href="#"
+          <router-link
+            to="#"
             class="flex items-center p-2 text-sm font-normal transition duration-75 text-gray-600 rounded-lg hover:bg-red-100 hover:text-pink-700 hover:font-semibold"
           >
             <svg
@@ -223,12 +223,12 @@
               />
             </svg>
             <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
-          </a>
+          </router-link>
         </li>
 
         <li>
-          <a
-            href="#"
+          <router-link
+            to="#"
             class="flex items-center p-2 text-sm font-normal transition duration-75 text-gray-600 rounded-lg hover:bg-red-100 hover:text-pink-700 hover:font-semibold"
           >
             <svg
@@ -244,12 +244,12 @@
               />
             </svg>
             <span class="flex-1 ml-3 whitespace-nowrap">JemiEats Staff</span>
-          </a>
+          </router-link>
         </li>
 
         <li>
-          <a
-            href="#"
+          <router-link
+            to="#"
             class="flex items-center p-2 text-sm font-normal transition duration-75 text-gray-600 rounded-lg hover:bg-red-100 hover:text-pink-700 hover:font-semibold"
           >
             <svg
@@ -265,11 +265,11 @@
               />
             </svg>
             <span class="flex-1 ml-3 whitespace-nowrap">Settings</span>
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>
-  </aside>
+  </router-linkside>
 </template>
 
 <style></style>

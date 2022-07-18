@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+defineEmits(["nextStage"]);
+</script>
 
 <template>
   <div class="flex flex-col pt-12 px-12 w-full text-gray-800">
@@ -11,7 +13,7 @@
     <hr class="border-slate-200 w-full mt-8" />
 
     <div class="mt-8 flex flex-col">
-      <form>
+      <form @submit.prevent="$emit('nextStage')">
         <div class="flex space-x-12">
           <div>
             <label for="order-type" class="text-xs">Delivery or pickup</label>
@@ -176,14 +178,13 @@
           </div>
         </div>
 
-        <router-link to="/create/order/notes">
+
           <button
-            type="button"
+            type="submit"
             class="inline-block mt-10 px-36 py-3 bg-pink-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-pink-700 hover:shadow-lg focus:bg-pink-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-800 active:shadow-lg transition duration-150 ease-in-out"
           >
             Create Order
           </button>
-        </router-link>
       </form>
     </div>
   </div>

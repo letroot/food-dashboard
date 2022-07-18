@@ -3,6 +3,8 @@ const props = defineProps({
   currentStep: Number,
 });
 
+defineEmits(["previousPage"]);
+
 const orderSteps = [
   {
     step: "1",
@@ -40,31 +42,32 @@ console.log(props.currentStep);
     <div class="pl-10 pt-12">
       <div class="flex flex-col">
         <!-- back to previous page -->
-        <div class="flex items-center mb-12">
-          <span
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M10 19l-7-7m0 0l7-7m-7 7h18"
-              />
-            </svg>
-          </span>
-          <span class="text-gray-600 text-xs ml-3 flex-1">
-            Go back to previous page
-          </span>
-          <!-- <ul>
-            <li v-for="orderStep in orderSteps" :key="orderStep.step">
-              <span>{{ orderStep.title }}</span>
-            </li>
-          </ul> -->
+        <div>
+          <button
+            @click="$emit('previousPage')"
+            class="flex items-center mb-12"
+            v-show="currentStep > 1"
+          >
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                />
+              </svg>
+            </span>
+            <span class="text-gray-600 text-xs ml-3 flex-1">
+              Go back to previous page
+            </span>
+          </button>
         </div>
         <!-- END back to previous page -->
 
@@ -112,7 +115,7 @@ console.log(props.currentStep);
         <div
           id="step-two-indicator"
           class="flex mt-2"
-          :class="[{ 'text-red-700': currentStep >= 2 }, 'text-gray-500']"
+          :class="[{ 'text-red-800': currentStep >= 2 }, 'text-gray-500']"
         >
           <span class="w-8"
             ><svg
