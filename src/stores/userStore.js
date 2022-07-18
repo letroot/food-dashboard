@@ -1,17 +1,47 @@
 import { defineStore } from "pinia";
-import axios from 'axios';
+import router from "../router";
+import axios from "axios";
 
-export const userStore = defineStore({
-  id: "counter",
+export const useUserStore = defineStore({
+  id: "userstore",
   state: () => ({
-    counter: 0,
+    user: null,
   }),
   getters: {
-    doubleCount: (state) => state.counter * 2,
-  },
-  actions: {
-    increment() {
-      this.counter++;
+    isAuthenticated() {
+      return !!this.user;
     },
   },
+  actions: {
+    loginUser(user) {
+      this.user = user;
+      return this.user;
+    },
+    logoutUser() {
+      this.user = null;
+      router.push("/login");
+    },
+  },
+  persist: true,
+});
+
+export const useOrderStore = defineStore({
+  id: "orderstore",
+  state: () => ({
+    orders: {},
+  }),
+  getters: {
+    getOrders() {
+      try {
+        const response = axios.get(
+          "https://jemi-eats.herokuapp.com/"
+        );
+        return response;
+      } catch (err) {
+        console.log(err);
+      }
+    },
+  },
+  actions: {},
+  // persist: true,
 });

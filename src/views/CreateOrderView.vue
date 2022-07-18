@@ -20,7 +20,7 @@ function gotoStep(step) {
   <div>
     <OrderNavBar />
     <div class="flex">
-      <OrderSideBar currentStep="formStage" />
+      <OrderSideBar :currentStep=formStage />
 
       <CreateOrderForm
         @nextStage="gotoStep(formStage + 1)"

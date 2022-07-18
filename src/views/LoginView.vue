@@ -2,22 +2,29 @@
 import axios from "axios";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { useUserStore } from "../stores/userStore";
+
+const userStore = useUserStore();
 
 const router = useRouter();
 let email = ref("");
 let password = ref("");
 
 async function loginHandler() {
-  const response = await axios.post(
-    "https://jemi-eats.herokuapp.com/users/login",
-    {
-      emailorMobile: email.value,
-      password: password.value,
-    }
-  );
-  localStorage.setItem("auth-token", JSON.stringify(response.data.data.token));
-  localStorage.setItem("user-profile", JSON.stringify(response.data.data.user));
-  router.push("/");
+  try {
+    const response = await axios.post(
+      "https://jemi-eats.herokuapp.com/users/login",
+      {
+        emailorMobile: email.value,
+        password: password.value,
+      }
+    );
+    userStore.loginUser(response.data.data.user);
+    router.push("/");
+  } catch (err) {
+    console.log(err);
+    alert("Username or password wrong");
+  }
 }
 </script>
 

@@ -25,6 +25,8 @@ const orderSteps = [
     subtitle: "Anything else we should know",
   },
 ];
+
+console.log(props.currentStep);
 </script>
 
 <!-- TODO -->
@@ -66,7 +68,11 @@ const orderSteps = [
         </div>
         <!-- END back to previous page -->
 
-        <div id="step-one-indicator" class="flex">
+        <div
+          id="step-one-indicator"
+          class="flex"
+          :class="{ 'text-red-800': currentStep >= 1 }"
+        >
           <span class="w-8"
             ><svg
               viewBox="0 0 17 50"
@@ -78,23 +84,150 @@ const orderSteps = [
                 cy="8.48416"
                 r="7.80543"
                 fill="white"
-                stroke="#D9D9D9"
+                stroke="currentColor"
                 stroke-width="1.35747"
               />
-              <circle cx="8.48417" cy="8.48416" r="2.82805" fill="#D9D9D9" />
+              <circle
+                cx="8.48417"
+                cy="8.48416"
+                r="2.82805"
+                fill="currentColor"
+              />
               <rect
                 x="8.14479"
                 y="18.7783"
                 width="0.904977"
                 height="31.2217"
-                fill="#D9D9D9"
+                fill="currentColor"
               />
             </svg>
           </span>
-          <div class="flex flex-col ml-6">
+          <div class="flex flex-col ml-4">
             <span class="text-sm">Step 1 of 4</span>
             <span class="text-base font-semibold">Type of Order</span>
             <span class="text-xs">Please select the type of order</span>
+          </div>
+        </div>
+
+        <div
+          id="step-two-indicator"
+          class="flex mt-2"
+          :class="[{ 'text-red-700': currentStep >= 2 }, 'text-gray-500']"
+        >
+          <span class="w-8"
+            ><svg
+              viewBox="0 0 17 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="8.48416"
+                cy="8.48416"
+                r="7.80543"
+                fill="white"
+                stroke="currentColor"
+                stroke-width="1.35747"
+              />
+              <circle
+                cx="8.48417"
+                cy="8.48416"
+                r="2.82805"
+                fill="currentColor"
+              />
+              <rect
+                x="8.14479"
+                y="18.7783"
+                width="0.904977"
+                height="31.2217"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div class="flex flex-col ml-4">
+            <span class="text-sm">Step {{ orderSteps[1].step }} of 4</span>
+            <span class="text-base font-semibold">{{
+              orderSteps[1].title
+            }}</span>
+            <span class="text-xs">{{ orderSteps[1].subtitle }}</span>
+          </div>
+        </div>
+
+        <div
+          id="step-three-indicator"
+          class="flex mt-2"
+          :class="[{ 'text-red-800': currentStep >= 3 }, 'text-gray-500']"
+        >
+          <span class="w-8"
+            ><svg
+              viewBox="0 0 17 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="8.48416"
+                cy="8.48416"
+                r="7.80543"
+                fill="white"
+                stroke="currentColor"
+                stroke-width="1.35747"
+              />
+              <circle
+                cx="8.48417"
+                cy="8.48416"
+                r="2.82805"
+                fill="currentColor"
+              />
+              <rect
+                x="8.14479"
+                y="18.7783"
+                width="0.904977"
+                height="31.2217"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div class="flex flex-col ml-4">
+            <span class="text-sm">Step {{ orderSteps[2].step }} of 4</span>
+            <span class="text-base font-semibold">{{
+              orderSteps[2].title
+            }}</span>
+            <span class="text-xs">{{ orderSteps[2].subtitle }}</span>
+          </div>
+        </div>
+
+        <div
+          id="step-three-indicator"
+          class="flex mt-2"
+          :class="[{ 'text-red-800': currentStep >= 4 }, 'text-gray-500']"
+        >
+          <span class="w-8"
+            ><svg
+              viewBox="0 0 17 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="8.48416"
+                cy="8.48416"
+                r="7.80543"
+                fill="white"
+                stroke="currentColor"
+                stroke-width="1.35747"
+              />
+              <circle
+                cx="8.48417"
+                cy="8.48416"
+                r="2.82805"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div class="flex flex-col ml-4">
+            <span class="text-sm">Step {{ orderSteps[3].step }} of 4</span>
+            <span class="text-base font-semibold">{{
+              orderSteps[3].title
+            }}</span>
+            <span class="text-xs">{{ orderSteps[3].subtitle }}</span>
           </div>
         </div>
       </div>
