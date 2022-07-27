@@ -120,7 +120,7 @@ console.log(props.currentStep);
             </svg>
           </span>
           <div class="flex flex-col ml-4">
-            <span class="text-xs">Step {{ orderSteps[index].step }} of 4</span>
+            <span class="text-xs">Step {{ orderSteps[index].step }} of {{ orderSteps.length }}</span>
             <span class="text-sm font-semibold">{{
               orderSteps[index].title
             }}</span>
