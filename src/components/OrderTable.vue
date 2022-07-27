@@ -1,5 +1,89 @@
 <script setup>
 import TableLite from "vue3-table-lite";
+import { reactive } from "vue";
+
+const table = reactive({
+  isLoading: false,
+  isReSearch: false,
+  columns: [
+    {
+      label: "Order Id",
+      headerClasses: ["text-sm"],
+      columnClasses: [],
+      field: "id",
+      width: "3%",
+      sortable: true,
+      isKey: true,
+    },
+    {
+      label: "GMV",
+      columnStyles: { background: "gold" },
+      field: "name",
+      width: "10%",
+      sortable: true,
+      display: function (row) {
+        return (
+          '<a href="javascript:void(0)" data-id="' +
+          row.id +
+          '" class="is-rows-el name-btn">' +
+          row.name +
+          "</a>"
+        );
+      },
+    },
+    {
+      label: "Customer Name",
+      headerStyles: { background: "gray" },
+      columnStyles: { background: "gold" },
+      field: "email",
+      width: "15%",
+      sortable: true,
+    },
+    {
+      label: "Restaurant's Name",
+      headerStyles: { background: "gray" },
+      columnStyles: { background: "gold" },
+      field: "email",
+      width: "15%",
+      sortable: true,
+    },
+    {
+      label: "Order Type",
+      headerStyles: { background: "gray" },
+      columnStyles: { background: "gold" },
+      field: "email",
+      width: "15%",
+      sortable: true,
+    },
+    {
+      label: "Order Status",
+      headerClasses: ["bg-gold"],
+      columnClasses: ["bg-gray"],
+      columnStyles: { background: "gray" },
+      field: "quick",
+      width: "10%",
+      display: function (row) {
+        return (
+          '<button type="button" data-id="' +
+          row.id +
+          '" class="is-rows-el quick-btn">Button</button>'
+        );
+      },
+    },
+  ],
+  rows: [],
+  totalRecordCount: 0,
+  sortable: {
+    order: "id",
+    sort: "asc",
+  },
+  messages: {
+    pagingInfo: "Showing {0}-{1} of {2}",
+    pageSizeChangeLabel: "Row count:",
+    gotoPageLabel: "Go to page:",
+    noDataAvailable: "No data",
+  },
+});
 </script>
 
 <template>
@@ -28,7 +112,7 @@ import TableLite from "vue3-table-lite";
               Export File
             </button>
             <button class="px-5 py-3 rounded-md bg-pink-600 text-sm text-white">
-              Create Order
+              <router-link to="/create/order">Create Order</router-link>
             </button>
           </div>
         </div>
@@ -81,7 +165,18 @@ import TableLite from "vue3-table-lite";
           <!-- <div></div> -->
         </div>
 
-        
+        <div class="mt-8">
+          <table-lite
+            :is-loading="table.isLoading"
+            :columns="table.columns"
+            :rows="table.rows"
+            :total="table.totalRecordCount"
+            :sortable="table.sortable"
+            :messages="table.messages"
+            @do-search="doSearch"
+            @is-finished="table.isLoading = false"
+          />
+        </div>
       </main>
     </div>
   </div>
