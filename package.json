@@ -18,7 +18,8 @@
     "pinia-plugin-persistedstate": "^1.6.3",
     "vue": "^3.2.37",
     "vue-chartjs": "^4.1.1",
-    "vue-router": "^4.1.2"
+    "vue-router": "^4.1.2",
+    "vue3-table-lite": "^1.2.3"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",

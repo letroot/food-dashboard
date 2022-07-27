@@ -80,7 +80,7 @@
             </li>
             <li>
               <router-link
-                to="#"
+                to="/orders"
                 class="flex items-center p-2 pl-11 w-full text-sm font-normal text-gray-600 rounded-lg transition duration-75 group hover:bg-red-100 hover:text-pink-700"
                 >All orders</router-link
               >
